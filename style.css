@@ -1,0 +1,132 @@
+:root {
+  color-scheme: light dark;
+  --bg: #fdfafb;
+  --surface: #ffffff;
+  --ink: #1b0e13;
+  --ink-soft: #6b5a60;
+  --brand: #8a1538;
+  --border: #f0e2e6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #120a0d;
+    --surface: #1c1116;
+    --ink: #f7eef1;
+    --ink-soft: #b3969e;
+    --brand: #e0567a;
+    --border: #2a1a20;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", Tahoma, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+header.top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+header.top .mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+header.top .name {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.updated {
+  color: var(--ink-soft);
+  font-size: 13px;
+  margin-bottom: 32px;
+}
+
+section {
+  margin-bottom: 28px;
+}
+
+h2 {
+  font-size: 18px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 12px 0;
+}
+
+th, td {
+  text-align: start;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+a {
+  color: var(--brand);
+}
+
+.lang-divider {
+  margin: 56px 0 32px;
+  border: none;
+  border-top: 2px solid var(--border);
+}
+
+.lang-section[lang="en"] {
+  direction: ltr;
+  text-align: left;
+}
+
+footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--ink-soft);
+  font-size: 13px;
+  text-align: center;
+}
+
+nav.crumbs {
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+nav.crumbs a { text-decoration: none; }
